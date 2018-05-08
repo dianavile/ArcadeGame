@@ -12,9 +12,8 @@ Play the [ArcadeGame]().
 
 # Mockup:
 Here you see the final result:
-- Startscreen:
 - The Game Instructions:
-- The Game:
+- The Game startscreen:
 - The Game:
 - The GameOver:
 
