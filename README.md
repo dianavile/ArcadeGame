@@ -23,7 +23,6 @@ Here you see the final result:
 - The challenge: to avoid the bugs that travel on the road. 
 - If a bug is touched, the Player is reset back at the beginning. 
 - Upon reaching the water, the Player is also reset back to the beginning.
-[Game Plan]()
 
 # TODO-list ArcadeGame project
 # Game Basic Functionality:
@@ -47,6 +46,7 @@ Here you see the final result:
 
 # Game Requirements:
 In order to let the game work properly, the following TODO list is needed:
+[Game Plan]()
 
 # How to begin:
 1. - [ ] Start with the _app.js_ file
@@ -61,7 +61,6 @@ In order to let the game work properly, the following TODO list is needed:
     * - [ ] Updates the Enemy location (you need to implement)
     * - [ ] Handles collision with the Player (you need to implement)
 7. - [ ] add your `own Enemy methods` as needed
-
 - Implement the `Player` class: _use the Enemy class as an example on how to get started_. 
 - At minimum you should implement the following:
 8. - [ ] The `Player function`, which initiates the Player by:
