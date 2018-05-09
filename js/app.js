@@ -9,9 +9,8 @@ var Enemy = function(x, y, speed) {
 Player.prototype.update = function() { // Add keyboard events
 // Turn into if-else statement for boundaries of canvas
 // i.e. if this.y > nnn;
-// this.y = nnn;
-// do this for left, right and bottom
-// Add: top, if player reaches water, reset game
+// this.y = nnn; //(= do this for left, right and bottom)
+// Add: top, if player reaches water, resetPlayer();
 };
 
 Player.prototype.render = function() { // Draw player on screen
@@ -21,6 +20,16 @@ Player.prototype.render = function() { // Draw player on screen
 Player.prototype.handleInput = function(e) {
     this.ctlKey = e;
 };
+
+// TODO: Add Collision function, reset Player and Reset Player Function.
+// function checkCollision() {
+
+// resetPlayer();
+// };
+
+// function resetPlayer() {
+
+// };
 
 // Update the enemy's position, required method for game
 // Parameter: dt, a time delta between ticks
@@ -33,6 +42,7 @@ Enemy.prototype.update = function(dt) {
     } else {
         this.x = -100; // Enemy off-canvas. Back to left of canvas
     }
+    // checkCollision(); // TODO: Add Check Collision  
 };    
 
 // Draw the enemy on the screen, required method for game
@@ -48,17 +58,17 @@ var Player = function(x, y, speed) {
      this.y = y; 
      this.speed = speed; 
      this.sprite = 'char-princess-girl.png'
-+};
+};
 
 // Instantiate Enemy and Player objects.
 // Place the player object in a variable called player	
-const player = new Player(202.5, 400, 50);
+const player = new Player(202, 400, 50);
 // Place all enemy objects in an array called allEnemies
 const enemyOne = new Enemy(-100, 227.5, 50);
 const enemyTwo = new Enemy(-100, 227.5, 50);
 const enemyThree = new Enemy(-100, 145, 50);
-const enemyFour = new Enemy(-100, 60, 50);
-const enemyFive = new Enemy(-100, 60, 50);
+const enemyFour = new Enemy(-100, 601 50);
+const enemyFive = new Enemy(-100, 61, 50);
 
 let allEnemies = [];
 allEnemies.push(enemyOne, enemyTwo, enemyThree, enemyFour, enemyFive);
