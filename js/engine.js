@@ -174,8 +174,8 @@ var Engine = (function(global) {
         'images/grass-block.png',
         'images/enemy-bug.png',
         'images/char-princess-girl.png'
-    ]);
-    Resources.onReady(init);
+    ]); // TODO: Add more images to this list.
+    Resources.onReady(init); // Place init function into array
 
     /* Assign the canvas' context object to the global variable (the window
      * object when run in a browser) so that developers can use it more easily
