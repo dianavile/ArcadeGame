@@ -17,17 +17,39 @@ Player.prototype.render = function() { // Draw player on screen
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
 
-Player.prototype.handleInput = function(e) {
-    this.ctlKey = e;
+Player.prototype.handleInput = function(e) { // Update Player Movements
+    if (keyCode == 'left') {
+        if (this.x - 101 < 0) {
+            this.x = 0;
+        } else {
+            this.x -= 101;
+        }
+    };
+    if (keyCode == 'right') {
+        if (this.x + 101 > 404) {
+            this.x = 404;
+         } else {
+            this.x += 101;
+         }
+    };
+     if (keyCode == 'down') {
+         if (this.y + 85 > 404) {
+             this.y = 404;
+         } else {
+             this.y += 83;
+         }
+     };
+     if (keyCode == 'up') {
+        if (this.y - 85 < 0) {
+             // resetPlayer();
+        } else {
+            this.y -= 83;
+         }
+     };       
 };
 
-// TODO: Add Collision function, reset Player and Reset Player Function.
+
 // function checkCollision() {
-
-// resetPlayer();
-// };
-
-// function resetPlayer() {
 
 // };
 
@@ -62,12 +84,12 @@ var Player = function(x, y, speed) {
 
 // Instantiate Enemy and Player objects.
 // Place the player object in a variable called player	
-const player = new Player(202, 400, 50);
+const player = new Player(202, 404, 50);
 // Place all enemy objects in an array called allEnemies
 const enemyOne = new Enemy(-100, 227.5, 50);
 const enemyTwo = new Enemy(-100, 227.5, 50);
 const enemyThree = new Enemy(-100, 145, 50);
-const enemyFour = new Enemy(-100, 601 50);
+const enemyFour = new Enemy(-100, 61, 50);
 const enemyFive = new Enemy(-100, 61, 50);
 
 let allEnemies = [];
