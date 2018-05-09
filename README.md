@@ -3,9 +3,11 @@
 - Created for the Udacity Nanodegree Front End Web Developer- (Full Google Scholarship).
 
 # Instructions:
-- Students are given a Udacity startercode(HTML,CSS and various JS files) of the static ArcadeGame project.
-- Goal is to get the Player from the grass safely over the road into the water.
-- The challenge: to avoid the bugs travelling on the road. 
+- Students are given a Udacity startercode (HTML,CSS and various JS files) of the static ArcadeGame project.
+- __Goal__: to get the Player from the grass safely over the road into the water.
+- __Challenge:__ to avoid the Enemies (bugs) travelling on the road. 
+- If a bug is touched, the Player is reset back at the beginning. 
+- Upon reaching the water, the Player is also reset back to the beginning.
 
 # Play the Game:
 Play the [ArcadeGame]().
@@ -18,64 +20,93 @@ Here you see the final result:
 - The GameOver:
 
 # Game Logics: (How the game works)
-- The goal of the game: to get your Player from the grass safely over the road into the water.
-- The challenge: to avoid the bugs that travel on the road. 
-- If a bug is touched, the Player is reset back at the beginning. 
-- Upon reaching the water, the Player is also reset back to the beginning.
+- __Goal game:__ get Player from the grass safely over the road into the water.
+- __Challenge:__ to avoid the Enemies (bugs) that travel on the road. 
 
 # TODO-list ArcadeGame project
-# Game Basic Functionality:
-* There are 2 objects: 
--  [ ] Object1= _`Player`_ 
+In order to let the game work properly, the following requirements need to be met:
+
+# Game Start (How to begin):
+- [ ] Start with the _app.js_ file
+- [ ] **DO NOT EDIT** files: _styles.css, engine.js, resources.js and the img folder including the images_!
+- [ ] Add Game instructions to README.md file. (_how to load and play the game_)
+
+# Basic Game Functionality (Requirements):
+- [ ] Inside the __app.js file__, implement the `Player` and the `Enemy` classes, using Object-Oriented JavaScript. 
+* Create 2 _Object-Oriented_ Objects, a `player` and an `enemy`  
+ - [ ] Object1= _`Player`_ 
  - [ ] Object2= _`Enemy`_.
 
-* __The __Player__ should:__
--  [ ] reach water using arrowkeys.(_up_, _right_, _down_ and _left_) 
- - [ ] _not collide_ into an enemy.
-
 * __The __Enemy__ should:__
--  [ ] _move to one direction_ only (= _right_).
+-  [ ] _move to one direction on the pavement_ only (= _right_).
 -  [ ] move in _varying speeds_.
+- [ ] Create the `Enemy` function, which initiates the _Enemy_ by:
+    * - [x] Load image by setting `this.sprite` to appropriate image in image folder (provided)
+    * - [ ] Set `initial location` of the Enemy (TODO)
+    * - [ ] Set `Enemy speed` (TODO)
+- [ ] Create the `update` method for the Enemy
+    * - [ ] `Update location` of the Enemy (TODO) 
+    * - [ ] Handle `collision` with the `Player` (TODO) 
+- [ ] add __OWN__ `Enemy methods` if needed (TODO) 
+
+* __The __Player__ should:__
+-  [ ] reach water using `arrowkeys`.(_up_, _right_, _down_ and _left_) 
+- [ ] ___NOT__ `collide`_ into an enemy.
+   * - [ ] Implement the `Player` class (TODO). Use the  `Enemy` class as example (TODO)
+- [ ] Create the `Player function`, which initiates the _Player_ by:
+    * - [ ] Load the image by setting `this.sprite` to appropriate img in image folder (TODO) 
+    * - [ ] Use code from the  `Enemy` function as example to get started (TODO) 
+    * - [ ] Set the `Player initial location` (TODO) 
+- [ ] Create the `update` method for the Player. Use `Enemy` function code as example (TODO) 
+- [ ] Create the `render method` method for the Player. Use the `Enemy` Render method code as example (TODO)     
+- [ ] Create the `handleInput method` (TODO) 
+  * - [ ] receives user input, allowedKeys (pressedKey)  (TODO) 
+  * - [ ] move the player according to input. In particular:
+    * - [ ] Left key: Move player to the left. (TODO) 
+    * - [ ] Right key: Move player to the right. (TODO) 
+    * - [ ] Up key: Move player up. (TODO) 
+    * - [ ] Down key: Move player down. (TODO) 
+ * - [ ]  Recall `player cannot move off screen` (check it and handle appropriately) (TODO)  
+- [ ] Add `own Player methods` if needed (TODO) 
 
 * __Collision__:
--  [ ] If player and enemy "collide", game should _reset_.
+-  [ ] If `player` and `enemy` `collide`, game will  _`reset`_.
 
 *__Game End__:
--  [ ] If player "reached the water", the player wins the game.
+-  [ ] If `player` reached the `water`, the player wins the game.
+ - [ ] If the player reaches the water, 
+ * - [ ] game reset 
+ * - [ ] move `player` back to the initial location (separate `reset Player method` to handle).
 
-# Game Requirements:
-In order to let the game work properly, the following TODO list is needed:
-[Game Plan]()
-
-# How to begin:
-1. - [ ] Start with the _app.js_ file
-2. - [ ] **DO NOT EDIT** thefiles: _styles.css, engine.js, resources.js and the img folder including the images_!
-3. - [ ] Add instructions how to load and play the game to the README.md file.
-4. - [ ] Inside the app.js file, implement the Player and the Enemy classes, using Object-Oriented JavaScript. Part of the code for the Enemy is provided to you, and you will need to complete the following:
-5. - [ ] The `Enemy` function, initiates the Enemy by:
-    * - [ ] Loading the image by setting this.sprite to the appropriate image in the image folder (already provided)
-    * - [ ] Setting the Enemy initial location (you need to implement)
-    * - [ ] Setting the Enemy speed (you need to implement)
-6. - [ ] The `update` method for the Enemy
-    * - [ ] Updates the Enemy location (you need to implement)
-    * - [ ] Handles collision with the Player (you need to implement)
-7. - [ ] add your `own Enemy methods` as needed
-- Implement the `Player` class: _use the Enemy class as an example on how to get started_. 
-- At minimum you should implement the following:
-8. - [ ] The `Player function`, which initiates the Player by:
-    * - [ ] Load the image by setting `this.sprite` to the appropriate image in the image folder (use code from the Enemy function as ex example)
-    * - [ ] Set the `Player initial location`
-9. - [ ] The `update method` for the Player (similar to the Enemy one)
-10. - [ ] The `render method` for the Player (use the Render method code from `Enemy`)
-11. - [ ] The `handleInput method`, receives user input, allowedKeys (the key which was pressed) and move the player according to that input. 
-- In particular:
-    * - [ ] Left key should move the player to the left, right key to the right, up should move the player up and down should move the player down.
-    * - [ ] Recall `player cannot move off screen` (check it and handle appropriately).
-    * - [ ] If the player reaches the water, game reset by moving the player back to the initial location (write a separate `reset Player method` to handle that).
-12. - [ ] Add `own Player methods` as needed.
 - Once completed implementing the Player and Enemy, instantiate them by:
-13. - [ ] Creating a new Player object
-14. - [ ] Creating several new Enemies objects and placing them in an array called allEnemies
+- [ ] Creating a new Player object
+- [ ] Creating several new Enemies objects 
+- [ ] Place new Enemies objects and placing in an array `called allEnemies[]`
+
+### Additional Game Functionality (Extras):
+In addition to the basic Game functionality, I will add the following additional Game features: 
+* - __Player selection:__ 
+ - [ ] User can select image for `player` character BEFORE game start. 
+ - [ ] Use of __different character images__ (provided in img folder).
+* - __Score:__ 
+- [ ] Implement a Gamescore. 
+- [ ] Increase Score each time the player reaches the water
+- [ ] Reset Game to 0 (or reduced) when collision occurs.
+* - __Game Level:__ 
+- [ ] Add different game levels
+- [ ] __Level 1:__ `easy`
+- [ ] __Level 2:__ `intermediate`
+- [ ] __Level 3:__ `advanced`
+* - __Collectables:__ 
+- [ ] Add `gems` to the game. 
+- [ ] Allow the `player` to collect gems.
+* - __Sound:__ 
+- [ ] Add sounds to the game 
+- [ ] At Game start
+- [ ] During Game: if reaching water (=winning points)
+- [ ] During Game: if obtaining gems (=collectables)
+- [ ] During Game: if collision between `player` and `enemy`(=bug).
+- [ ] At Game End: if game is over (=game end).
 
 ### Code Dependencies
 - This project is created based on the `Udacity starterscode`.
@@ -89,25 +120,4 @@ In order to let the game work properly, the following TODO list is needed:
 ### Contributing
 No pull requests are accepted.
 
-### Additional Functionality
-In addition to the basic functionality, I will add the following additional features: 
-
-* __[ ] Player selection:__ 
-- Allow the user to select the image for the player character before starting the game. 
-- Use different character images provided in the images folder.
-
-* __[ ] Score:__ 
-- Implement a Gamescore. 
-- Increase Score each time the player reaches the water
-- Reset Game to 0 (or reduced) when collision occurs.
-
-* __[ ] Collectables:__
-- Add 3 different game levels: _`easy`, `intermediate` & `advanced`).
-
-* __[ ] Game Level:__ 
-- Add gems to the game. 
-- Allow the player to collect gems.
-
-* - [ ] Sound: 
-- Add sounds to the game 
-- At game start, winning points, game end and collision.
+### Thanks to
