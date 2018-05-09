@@ -50,9 +50,15 @@ Player.prototype.handleInput = function(e) { // Update Player Movements
 };
 
 
-// function checkCollision() {
-
-// };
+function checkCollision(oneEnemy) { // Check if 'this' Enemy collides with player
+    if (player.x < oneEnemy.x + 50 &&
+    player.x + 50 > oneEnemy.x &&
+    player.y < oneEnemy.y + 20 &&
+    20 + player.y > oneEnemy.y) {
+        alert('Hit!')
+        }
+    };
+};
 
 // Update the enemy's position, required method for game
 // Parameter: dt, a time delta between ticks
@@ -65,7 +71,7 @@ Enemy.prototype.update = function(dt) {
     } else {
         this.x = -100; // Enemy off-canvas. Back to left of canvas
     }
-    // checkCollision(); // TODO: Add Check Collision  
+    checkCollision(this);  
 };    
 
 // Draw the enemy on the screen, required method for game
@@ -82,6 +88,7 @@ var Player = function(x, y) {
      this.sprite = 'char-princess-girl.png'
 };
 
+// Add Collision function to detect if Player and Enemy(bug) collide
 // function resetPlayer() {
 // scoreboard = 0;
 // player position back to x = 202 and y = 404
