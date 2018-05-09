@@ -29,7 +29,7 @@ Created for the Udacity Nanodegree Front End Web Developer- (Full Google Scholar
 Clone this project and open the `index.html` file in your browser, or click the link in the Project description.
 
 # Play the Game:
-Play the [ArcadeGame]().
+Play the [ArcadeGame](https://dianavile.github.io/ArcadeGame/).
 
 # Mockup:
 Here you see the final result:
