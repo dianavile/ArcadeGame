@@ -140,13 +140,17 @@ To instantiate a new object from here:
     let myself = new SoftwareDeveloper('Diana');
 ```
 If we would then invoke `myself.name`, it would yield Diana.
+
 __So:__
-1. Define:
-```
+Define:
+
+
     new FuncName();
-```
-2. Add properties:
-```
+
+
+Add properties:
+
+
     function FuncName(arg1, arg2) {
         this.arg1 = arg1;
         this.arg2 = arg2;
@@ -155,13 +159,15 @@ __So:__
             console.log(`Hello ${arg2}!`);
         };
     };
-```
-3. Assign to variable to instantiate new object __or__ start with 2. and then add:
-```
+
+
+Assign to variable to instantiate new object __or__ start with 2. and then add:
+
+
     const objName = new FuncName(arg1, arg2);
-```
-4.To check if objName was created with FuncName: 
-`objName instanceof FuncName`.
+
+
+To check if objName was created with FuncName: `objName instanceof FuncName`.
 
 ### Setting the value of `this` ourselves
 1. `call()`
@@ -169,16 +175,15 @@ __So:__
 3. `bind()`
 
 ### Prototypal inheritance
-We can add methods to the constructor function's __prototype__ property. 
-The prototype property is an object. 
-All objects created by that construcor are linked to this prototype object.
+We can add methods to the constructor function's __prototype__ property. The prototype property is an object. All objects created by that construcor are linked to this prototype object.
+
 
     Object.prototype.method = function() {
         if (this.canTalk) {
             console.log('Hi, I am ' + this.name);
         }
     };
-```
+
 ##### Prototype chain
 * Objects own properties and methods ˅
 * Constructor prototype ˅
@@ -190,10 +195,7 @@ All objects created by that construcor are linked to this prototype object.
 2. `isPrototypeOf();`
 3. `Object.getPrototypeOf();`
 
-- Every time an object is created, a special property is assigned to it under the hood: `constructor`. 
-- It returns a reference to the constructor function that created that object (`object.constructor`).
+Every time an object is created, a special property is assigned to it under the hood: constructor. It returns a reference to the constructor function that created that object (`object.constructor`).
 
 ##### Subclasses
-To set up the prototype of an object ourselves, we use: 
-`Object.create()`. 
-This is a clean method to establish prototypal inheritance.
+To set up the prototype of an object ourselves, we use `Object.create()`. This is a clean method to establish prototypal inheritance.
