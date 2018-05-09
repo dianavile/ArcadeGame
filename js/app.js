@@ -82,14 +82,14 @@ Player.prototype.handleInput = function(keyCode) { // Update Player Movements
 
 // Add Collision function to detect if Player and Enemy(bug) collide
 function checkCollision(oneEnemy) { // Check if 'this' Enemy collides with player
-    if (player.x < oneEnemy.x + 50 &&
-    player.x + 50 > oneEnemy.x &&
-    player.y < oneEnemy.y + 20 &&
-    20 + player.y > oneEnemy.y) {
-        alert('Hit!')
+    if (player.x < oneEnemy.x + 80 &&
+    player.x + 60 > oneEnemy.x &&
+    player.y < oneEnemy.y + 80 &&
+    40 + player.y > oneEnemy.y) {
+        player.x = 202;
+        player.y = 404;
         }
     };
-};
 
 // function resetPlayer() {
 // scoreboard = 0;
