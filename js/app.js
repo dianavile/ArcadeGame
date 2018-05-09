@@ -1,3 +1,4 @@
+//Enemy
 // Enemies our player must avoid
 var Enemy = function(x, y, speed) {
     this.x = x;
@@ -6,6 +7,36 @@ var Enemy = function(x, y, speed) {
     this.sprite = 'images/enemy-bug.png';
 };
 
+// Update the enemy's position, required method for game
+// Parameter: dt, a time delta between ticks
+Enemy.prototype.update = function(dt) {
+    // You should multiply any movement by the dt parameter
+    // which will ensure the game runs at the same speed for
+    // all computers.
+    if (this.x <= 505) { // Enemies move horizontally (= ONLY x-value changes)
+        this.x += this.speed * dt;
+    } else {
+        this.x = -100; // Enemy off-canvas. Back to left of canvas
+    }
+    checkCollision(this); 
+    
+};    
+
+// Draw the enemy on the screen, required method for game
+Enemy.prototype.render = function() { // Rendering (=show Enemy on Canvas)
+    ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
+};
+
+// Now write your own player class
+// This class requires an update(), render() and
+// a handleInput() method.
+var Player = function(x, y) {
+     this.x = x; 
+     this.y = y; 
+     this.sprite = 'char-princess-girl.png'
+};
+
+//Player
 Player.prototype.update = function() { // Add keyboard events
 // Turn into if-else statement for boundaries of canvas
 // i.e. if this.y > nnn;
@@ -17,7 +48,7 @@ Player.prototype.render = function() { // Draw player on screen
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
 
-Player.prototype.handleInput = function(e) { // Update Player Movements
+Player.prototype.handleInput = function(keyCode) { // Update Player Movements
     if (keyCode == 'left') {
         if (this.x - 101 < 0) {
             this.x = 0;
@@ -49,7 +80,7 @@ Player.prototype.handleInput = function(e) { // Update Player Movements
      };       
 };
 
-
+// Add Collision function to detect if Player and Enemy(bug) collide
 function checkCollision(oneEnemy) { // Check if 'this' Enemy collides with player
     if (player.x < oneEnemy.x + 50 &&
     player.x + 50 > oneEnemy.x &&
@@ -60,35 +91,6 @@ function checkCollision(oneEnemy) { // Check if 'this' Enemy collides with playe
     };
 };
 
-// Update the enemy's position, required method for game
-// Parameter: dt, a time delta between ticks
-Enemy.prototype.update = function(dt) {
-    // You should multiply any movement by the dt parameter
-    // which will ensure the game runs at the same speed for
-    // all computers.
-    if (this.x <= 505) { // Enemies move horizontally (= ONLY x-value changes)
-        this.x += this.speed * dt;
-    } else {
-        this.x = -100; // Enemy off-canvas. Back to left of canvas
-    }
-    checkCollision(this);  
-};    
-
-// Draw the enemy on the screen, required method for game
-Enemy.prototype.render = function() { // Rendering (=show Enemy on Canvas)
-    ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
-};
-
-// Now write your own player class
-// This class requires an update(), render() and
-// a handleInput() method.
-var Player = function(x, y) {
-     this.x = x; 
-     this.y = y; 
-     this.sprite = 'char-princess-girl.png'
-};
-
-// Add Collision function to detect if Player and Enemy(bug) collide
 // function resetPlayer() {
 // scoreboard = 0;
 // player position back to x = 202 and y = 404
