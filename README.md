@@ -2,7 +2,22 @@
 - Build a Classical Arcade Game (Frogger Game Clone)(Project 4).
 - Created for the Udacity Nanodegree Front End Web Developer- (Full Google Scholarship).
 
-# Instructions:
+## Table of Contents
+
+* [Project Instructions](#project-instructions)
+* [Play the Game](#play-the-game)
+* [Game Logics](#game-logics)
+* [Mockup](#mockup)
+* [TODO-list](#TODO-list)
+* [Game Start](#game-start)
+* [Basic Game Functionality](#game-requirements)
+* [Additional Game Functionality](#game-extras)
+* [Code Dependencies](#dependencies)
+* [Bugs](#bugs)
+* [Contributing](#contributing)
+* [Credits](#credits)
+
+# Project Instructions:
 - Students are given a Udacity startercode (HTML,CSS and various JS files) of the static ArcadeGame project.
 - __Goal__: to get the Player from the grass safely over the road into the water.
 - __Challenge:__ to avoid the Enemies (bugs) travelling on the road. 
@@ -35,7 +50,6 @@ In order to let the game work properly, the following requirements need to be me
 * - [ ] Inside the __app.js file__, create two objects: the 1) `Player` and the 2) `Enemy` classes, using Object-Oriented JavaScript. 
      - [ ] Object1= _`Player`_ 
      - [ ] Object2= _`Enemy`_.
-
 * __The __Enemy__ should:__
 -  [ ] _move to one direction on the pavement_ only (= _right_).
 -  [ ] move in _varying speeds_.
@@ -47,7 +61,6 @@ In order to let the game work properly, the following requirements need to be me
     * - [ ] `Update location` of the Enemy (TODO) 
     * - [ ] Handle `collision` with the `Player` (TODO) 
 - [ ] add __OWN__ `Enemy methods` if needed (TODO) 
-
 * __The __Player__ should:__
 -  [ ] reach water using `arrowkeys`.(_up_, _right_, _down_ and _left_) 
 - [ ] ___NOT__ `collide`_ into an enemy.
@@ -67,15 +80,12 @@ In order to let the game work properly, the following requirements need to be me
     * - [ ] Down key: Move player down. (TODO) 
  * - [ ]  Recall `player cannot move off screen` (check it and handle appropriately) (TODO)  
 - [ ] Add `own Player methods` if needed (TODO) 
-
 - Once completed implementing the Player and Enemy, instantiate them by:
 - [ ] Creating a new Player object
 - [ ] Creating several new Enemies objects 
 - [ ] Place new Enemies objects and placing in an array `called allEnemies[]`
-
 * __Collision__:
 -  [ ] If `player` and `enemy` `collide`, game will  _`reset`_.
-
 *__Game End__:
 -  [ ] If `player` reached the `water`, the player wins the game.
  - [ ] If the player reaches the water, 
@@ -116,7 +126,9 @@ In addition to the basic Game functionality, I will add the following additional
 * Backgrounds: 
 * Emojis:
 
+# Bugs:
+
 ### Contributing
 No pull requests are accepted.
 
-### Thanks to
+### Credits
