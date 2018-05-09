@@ -4,7 +4,8 @@
 
 ## Table of Contents
 
-* [Project Instructions](#project-instructions)
+* [Project](#project)
+* [Installation](#installation)
 * [Play the Game](#play-the-game)
 * [Game Logics](#game-logics)
 * [Mockup](#mockup)
@@ -17,12 +18,15 @@
 * [Contributing](#contributing)
 * [Credits](#credits)
 
-# Project Instructions:
+# Project:
 - Students are given a Udacity startercode (HTML,CSS and various JS files) of the static ArcadeGame project.
 - __Goal__: to get the Player from the grass safely over the road into the water.
 - __Challenge:__ to avoid the Enemies (bugs) travelling on the road. 
 - If a bug is touched, the Player is reset back at the beginning. 
 - Upon reaching the water, the Player is also reset back to the beginning.
+
+## Installation
+Clone this project and open the `index.html` file in your browser, or click the link in the Project description.
 
 # Play the Game:
 Play the [ArcadeGame]().
