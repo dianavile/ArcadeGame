@@ -33,15 +33,12 @@ Enemy.prototype.render = function() { // Rendering (=show Enemy on Canvas)
 var Player = function(x, y) {
      this.x = x; 
      this.y = y; 
-     this.sprite = 'char-princess-girl.png'
+     this.sprite = 'char-princess-girl.png';
 };
 
 //Player
-Player.prototype.update = function() { // Add keyboard events
-// Turn into if-else statement for boundaries of canvas
-// i.e. if this.y > nnn;
-// this.y = nnn; //(= do this for left, right and bottom)
-// Add: top, if player reaches water, resetPlayer();
+Player.prototype.update = function() { 
+
 };
 
 Player.prototype.render = function() { // Draw player on screen
@@ -49,47 +46,48 @@ Player.prototype.render = function() { // Draw player on screen
 };
 
 Player.prototype.handleInput = function(keyCode) { // Update Player Movements
-    if (keyCode == 'left') {
+    if (keyCode == 'left') { // See below for allowedKeys
         if (this.x - 101 < 0) {
             this.x = 0;
         } else {
             this.x -= 101;
         }
-    };
+    }
     if (keyCode == 'right') {
         if (this.x + 101 > 404) {
             this.x = 404;
          } else {
             this.x += 101;
          }
-    };
+    }
      if (keyCode == 'down') {
          if (this.y + 85 > 404) {
              this.y = 404;
          } else {
              this.y += 83;
          }
-     };
+     }
      if (keyCode == 'up') {
-        if (this.y - 85 < 0) {
-            resetPlayer();
-            counter = counter +1; // updateScoreBoard();
-            scoreBoard.innerHTML = counter;
+        if (this.y - 85 < 0) { //Player reach water
+            resetPlayer();    //Player back to start
+            counter = counter +1; // Level up
+            scoreBoard.innerHTML = counter; // Update Level up in HTML
         } else {
             this.y -= 83;
+            
          }
-     };       
+     }       
 };
 
 // Add Collision function to detect if Player and Enemy(bug) collide
 function checkCollision(oneEnemy) { // Check if 'this' Enemy collides with player
-    if (player.x < oneEnemy.x + 80 &&
+    if (player.x < oneEnemy.x + 80 && // From https://developer.mozilla.org/en-US/docs/Games/Techniques/2D_collision_detection
     player.x + 60 > oneEnemy.x &&
     player.y < oneEnemy.y + 80 &&
     40 + player.y > oneEnemy.y) {
-        resetPlayer();
-        counter = 0;
-        scoreBoard.innerHTML = counter;
+        resetPlayer(); //Player back to start
+        counter = 0; // Level reset to 0
+        scoreBoard.innerHTML = counter; // Update Level 0 in HTML
         }
     };
 
@@ -106,7 +104,7 @@ let counter = 0;
 // Place the player object in a variable called player	
 const player = new Player(202, 404);//delete speed
 // Place all enemy objects in an array called allEnemies
-const enemyOne = new Enemy(-100, 227.5, 50);
+const enemyOne = new Enemy(-100, 227.5, 50); // TODO: Add more Enemies each time player levels up.
 const enemyTwo = new Enemy(-100, 227.5, 50);
 const enemyThree = new Enemy(-100, 145, 50);
 const enemyFour = new Enemy(-100, 61, 50);
