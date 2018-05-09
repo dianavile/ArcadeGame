@@ -24,14 +24,14 @@ Enemy.prototype.update = function(dt) {
 
 // Draw the enemy on the screen, required method for game
 Enemy.prototype.render = function() { // Rendering (=show Enemy on Canvas)
-    ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
-};
+    ctx.drawImage(Resources.get(this.sprite), this.x, this.y); // ctx is canvas
+}; // Render method uses ctx.drawImage() method that takes three params: image, x, y
 
 // Now write your own player class
 // This class requires an update(), render() and
 // a handleInput() method.
 var Player = function(x, y) {
-     this.x = x; 
+     this.x = x; // Same as for enemy, without 'speed' (not necessary)
      this.y = y; 
      this.sprite = 'char-princess-girl.png';
 };
@@ -46,7 +46,7 @@ Player.prototype.render = function() { // Draw player on screen
 };
 
 Player.prototype.handleInput = function(keyCode) { // Update Player Movements
-    if (keyCode == 'left') { // See below for allowedKeys
+    if (keyCode == 'left') { // See allowedKeys
         if (this.x - 101 < 0) {
             this.x = 0;
         } else {
@@ -69,7 +69,7 @@ Player.prototype.handleInput = function(keyCode) { // Update Player Movements
      }
      if (keyCode == 'up') {
         if (this.y - 85 < 0) { //Player reach water
-            resetPlayer();    //Player back to start
+            resetPlayer();    // Player back to start
             counter = counter +1; // Level up
             scoreBoard.innerHTML = counter; // Update Level up in HTML
         } else {
@@ -91,10 +91,10 @@ function checkCollision(oneEnemy) { // Check if 'this' Enemy collides with playe
         }
     };
 
-// function resetPlayer() {
-// scoreboard = 0;
-// player position back to x = 202 and y = 404
-// };
+function resetPlayer() { // player position back to x = 202 and y = 404
+    player.x = 202;
+    player.y = 404;
+};
  	 
 // function updateScoreBoard
 let scoreBoard = document.getElementById('scoreboard');
