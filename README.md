@@ -32,10 +32,9 @@ In order to let the game work properly, the following requirements need to be me
 - [ ] Add Game instructions to README.md file. (_how to load and play the game_)
 
 # Basic Game Functionality (Requirements):
-- [ ] Inside the __app.js file__, implement the `Player` and the `Enemy` classes, using Object-Oriented JavaScript. 
-* Create 2 _Object-Oriented_ Objects, a `player` and an `enemy`  
- - [ ] Object1= _`Player`_ 
- - [ ] Object2= _`Enemy`_.
+* - [ ] Inside the __app.js file__, create two objects: the 1) `Player` and the 2) `Enemy` classes, using Object-Oriented JavaScript. 
+     - [ ] Object1= _`Player`_ 
+     - [ ] Object2= _`Enemy`_.
 
 * __The __Enemy__ should:__
 -  [ ] _move to one direction on the pavement_ only (= _right_).
@@ -69,19 +68,19 @@ In order to let the game work properly, the following requirements need to be me
  * - [ ]  Recall `player cannot move off screen` (check it and handle appropriately) (TODO)  
 - [ ] Add `own Player methods` if needed (TODO) 
 
+- Once completed implementing the Player and Enemy, instantiate them by:
+- [ ] Creating a new Player object
+- [ ] Creating several new Enemies objects 
+- [ ] Place new Enemies objects and placing in an array `called allEnemies[]`
+
 * __Collision__:
 -  [ ] If `player` and `enemy` `collide`, game will  _`reset`_.
 
 *__Game End__:
 -  [ ] If `player` reached the `water`, the player wins the game.
  - [ ] If the player reaches the water, 
- * - [ ] game reset 
- * - [ ] move `player` back to the initial location (separate `reset Player method` to handle).
-
-- Once completed implementing the Player and Enemy, instantiate them by:
-- [ ] Creating a new Player object
-- [ ] Creating several new Enemies objects 
-- [ ] Place new Enemies objects and placing in an array `called allEnemies[]`
+       * - [ ] game reset 
+       * - [ ] move `player` back to the initial location (separate `reset Player method` to handle).
 
 ### Additional Game Functionality (Extras):
 In addition to the basic Game functionality, I will add the following additional Game features: 
