@@ -72,8 +72,8 @@ Player.prototype.handleInput = function(keyCode) { // Update Player Movements
      };
      if (keyCode == 'up') {
         if (this.y - 85 < 0) {
-             // resetPlayer();
-            // updateScoreBoard();
+            resetPlayer();
+            counter = counter +1; // updateScoreBoard();
         } else {
             this.y -= 83;
          }
@@ -96,10 +96,12 @@ function checkCollision(oneEnemy) { // Check if 'this' Enemy collides with playe
 // player position back to x = 202 and y = 404
 // };
  	 
-// function updateScoreBoard() {
-// scoreboard +1 or whatever
-// };
-
+// function updateScoreBoard
+let scoreBoard = document.getElementById('scoreboard');
+let counter = 0;
+function setScore() {
+    scoreBoard.innerText = counter;
+};
 
 // Instantiate Enemy and Player objects.
 // Place the player object in a variable called player	
