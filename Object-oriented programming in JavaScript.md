@@ -73,7 +73,7 @@ __Note:__ Functions can be invoked by (), objects can __NOT__.
 
 Besides global scope and function scope, there is _runtime scope_. This is the context of the function, i.e. the set of variables available for the function to use.
 A function has acces to: _function's arguments, local variables, variables from parent function scope, and global variables._
-    ```
+
     const a = 'a'; // global variable
     function parent() {
         const b = 'b'; // variable from parent scope
@@ -81,9 +81,11 @@ A function has acces to: _function's arguments, local variables, variables from 
             const c = 'c'; // local variable within function
         }
     };
-```
-- `CHILD > PARENT > GLOBAL _SCOPE CHAIN_`:start sequence thoughts from innermost function and work outwards from there, building what innermost needs all the way to global window.
-- Functions will retain the scope chain plus access even if they're invoked somewhere else than where it was declared.
+
+CHILD > PARENT > GLOBAL _SCOPE CHAIN_: start sequence thoughts from innermost function and work outwards from there, building what innermost needs all the way to global window.
+
+Functions will retain the scope chain plus access even if they're invoked somewhere else than where it was declared.
+
 __Note:___ if two variables have the same name, the one that is found 'first' by the JavaScript engine prevails (_variable shadowing_).
 
 ### Closure
@@ -106,21 +108,23 @@ Classes are categories of objects.
 - __Class__: blueprint for an object
 
 ##### Constructor functions
-Start with a capital letter; Must be called with `new`; create object automatically
-    ```
+Start with a capital letter; Must be called with `new`; Has object created automatically
+
+
     new SoftwareDev() {
         this.favLang = 'JS'; // this refers to SoftwareDev
     }; // no return statement!
-    ```
--From here, you can create a new object (_an instance_) 
-- as many as you like.
-```
-    let developer = new SoftwareDeveloper();
-```
 
-__Constructor functions accept arguments!__ 
-- We could update the previous as follows:
-```
+
+From here, you can create a new object (_an instance_) - as many as you like.
+
+
+    let developer = new SoftwareDeveloper();
+
+
+__Constructor functions accept arguments!__ We could update the previous as follows:
+
+
     function SoftwareDeveloper (name) {
         this.favLang = 'JS';
         this.name = name;
@@ -128,9 +132,10 @@ __Constructor functions accept arguments!__
             console.log(`I'm ${this.name}!`);
         }
     };
-```
 
-- To instantiate a new object from here:
+
+To instantiate a new object from here:
+
 ```
     let myself = new SoftwareDeveloper('Diana');
 ```
@@ -164,18 +169,16 @@ __So:__
 3. `bind()`
 
 ### Prototypal inheritance
-- We can add methods to the constructor function's __prototype__ property. 
-- The prototype property is an object. 
-- All objects created by that construcor are linked to this prototype object.
+We can add methods to the constructor function's __prototype__ property. 
+The prototype property is an object. 
+All objects created by that construcor are linked to this prototype object.
 
-```
     Object.prototype.method = function() {
         if (this.canTalk) {
             console.log('Hi, I am ' + this.name);
         }
     };
 ```
-
 ##### Prototype chain
 * Objects own properties and methods ˅
 * Constructor prototype ˅
