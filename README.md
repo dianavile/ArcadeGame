@@ -1,6 +1,6 @@
 # ArcadeGame
-Build a Classical Arcade Game (Frogger Game Clone)(Project 4).
-Created for the Udacity Nanodegree Front End Web Developer- (Full Google Scholarship).
+- Build a Classical Arcade Game (Frogger Game Clone)(Project 4).
+- Created for the Udacity Nanodegree Front End Web Developer- (Full Google Scholarship).
 
 ## Table of Contents
 
