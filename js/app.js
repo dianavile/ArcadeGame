@@ -42,6 +42,7 @@ Player.prototype.handleInput = function(e) { // Update Player Movements
      if (keyCode == 'up') {
         if (this.y - 85 < 0) {
              // resetPlayer();
+            // updateScoreBoard();
         } else {
             this.y -= 83;
          }
@@ -75,16 +76,25 @@ Enemy.prototype.render = function() { // Rendering (=show Enemy on Canvas)
 // Now write your own player class
 // This class requires an update(), render() and
 // a handleInput() method.
-var Player = function(x, y, speed) {
+var Player = function(x, y) {
      this.x = x; 
      this.y = y; 
-     this.speed = speed; 
      this.sprite = 'char-princess-girl.png'
 };
 
+// function resetPlayer() {
+// scoreboard = 0;
+// player position back to x = 202 and y = 404
+// };
+ 	 
+// function updateScoreBoard() {
+// scoreboard +1 or whatever
+// };
+
+
 // Instantiate Enemy and Player objects.
 // Place the player object in a variable called player	
-const player = new Player(202, 404, 50);
+const player = new Player(202, 404);//delete speed
 // Place all enemy objects in an array called allEnemies
 const enemyOne = new Enemy(-100, 227.5, 50);
 const enemyTwo = new Enemy(-100, 227.5, 50);
