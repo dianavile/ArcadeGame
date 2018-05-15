@@ -59,60 +59,59 @@ In order to let the game work properly, the following requirements need to be me
 -  [ ] move in _varying speeds_.
 - [ ] Create the `Enemy` function, which initiates the _Enemy_ by:
     * - [x] Load image by setting `this.sprite` to appropriate image in image folder (provided)
-    * - [ ] Set `initial location` of the Enemy (TODO)
-    * - [ ] Set `Enemy speed` (TODO)
-- [ ] Create the `update` method for the Enemy
-    * - [ ] `Update location` of the Enemy (TODO) 
-    * - [ ] Handle `collision` with the `Player` (TODO) 
-- [ ] add __OWN__ `Enemy methods` if needed (TODO) 
+    * - [x] Set `initial location` of the Enemy (TODO)
+    * - [x] Set `Enemy speed` (TODO)
+- [x] Create the `update` method for the Enemy
+    * - [x] `Update location` of the Enemy (TODO) 
+    * - [x] Handle `collision` with the `Player` (TODO) 
+- [x] add __OWN__ `Enemy methods` if needed (TODO) 
 * __The __Player__ should:__
--  [ ] reach water using `arrowkeys`.(_up_, _right_, _down_ and _left_) 
-- [ ] ___NOT__ `collide`_ into an enemy.
-   * - [ ] Implement the `Player` class (TODO). Use the  `Enemy` class as example (TODO)
-- [ ] Create the `Player function`, which initiates the _Player_ by:
-    * - [ ] Load the image by setting `this.sprite` to appropriate img in image folder (TODO) 
-    * - [ ] Use code from the  `Enemy` function as example to get started (TODO) 
-    * - [ ] Set the `Player initial location` (TODO) 
-- [ ] Create the `update` method for the Player. Use `Enemy` function code as example (TODO) 
-- [ ] Create the `render method` method for the Player. Use the `Enemy` Render method code as example (TODO)     
-- [ ] Create the `handleInput method` (TODO) 
-  * - [ ] receives user input, allowedKeys (pressedKey)  (TODO) 
-  * - [ ] move the player according to input. In particular:
-    * - [ ] Left key: Move player to the left. (TODO) 
-    * - [ ] Right key: Move player to the right. (TODO) 
-    * - [ ] Up key: Move player up. (TODO) 
-    * - [ ] Down key: Move player down. (TODO) 
- * - [ ]  Recall `player cannot move off screen` (check it and handle appropriately) (TODO)  
-- [ ] Add `own Player methods` if needed (TODO) 
+-  [x] reach water using `arrowkeys`.(_up_, _right_, _down_ and _left_) 
+- [x] ___NOT__ `collide`_ into an enemy.
+   * - [x] Implement the `Player` class (TODO). Use the  `Enemy` class as example (TODO)
+- [x] Create the `Player function`, which initiates the _Player_ by:
+    * - [x] Load the image by setting `this.sprite` to appropriate img in image folder (TODO) 
+    * - [x] Use code from the  `Enemy` function as example to get started (TODO) 
+    * - [x] Set the `Player initial location` (TODO) 
+- [x] Create the `update` method for the Player. Use `Enemy` function code as example (TODO) 
+- [x] Create the `render method` method for the Player. Use the `Enemy` Render method code as example (TODO)     
+- [x] Create the `handleInput method` (TODO) 
+  * - [x] receives user input, allowedKeys (pressedKey)  (TODO) 
+  * - [x] move the player according to input. In particular:
+    * - [x] Left key: Move player to the left. (TODO) 
+    * - [x] Right key: Move player to the right. (TODO) 
+    * - [x] Up key: Move player up. (TODO) 
+    * - [x] Down key: Move player down. (TODO) 
+ * - [x]  Recall `player cannot move off screen` (check it and handle appropriately) (TODO)  
+- [x] Add `own Player methods` if needed (TODO) 
 - Once completed implementing the Player and Enemy, instantiate them by:
-- [ ] Creating a new Player object
-- [ ] Creating several new Enemies objects 
-- [ ] Place new Enemies objects and placing in an array `called allEnemies[]`
+- [x] Creating a new Player object
+- [x] Creating several new Enemies objects 
+- [x] Place new Enemies objects and placing in an array `called allEnemies[]`
 * __Collision__:
--  [ ] If `player` and `enemy` `collide`, game will  _`reset`_.
+-  [x ] If `player` and `enemy` `collide`, game will  _`reset`_.
 *__Game End__:
--  [ ] If `player` reached the `water`, the player wins the game.
+-  [] If `player` reached the `water`, the player wins the game.
  - [ ] If the player reaches the water, 
-       * - [ ] game reset 
-       * - [ ] move `player` back to the initial location (separate `reset Player method` to handle).
+       * - [x] game reset 
+       * - [x] move `player` back to the initial location (separate `reset Player method` to handle).
 
 ### Additional Game Functionality (Extras):
 In addition to the basic Game functionality, I will add the following additional Game features: 
 * - __Player selection:__ 
- - [ ] User can select image for `player` character BEFORE game start. 
- - [ ] Use of __different character images__ (provided in img folder).
+ - [x] Use of __different character image__ (provided in img folder).
 * - __Score:__ 
-- [ ] Implement a Gamescore. 
-- [ ] Increase Score each time the player reaches the water
-- [ ] Reset Game to 0 (or reduced) when collision occurs.
-* - __Game Level:__ 
-- [ ] Add different game levels
-- [ ] __Level 1:__ `easy`
-- [ ] __Level 2:__ `intermediate`
-- [ ] __Level 3:__ `advanced`
+- [x] Implement a Gamescore. 
+- [x] Increase Score each time the player reaches the water
+- [x] Reset Game to 0 (or reduced) when collision occurs.
 * - __Collectables:__ 
-- [ ] Add `gems` to the game. 
+- [x] Add `gems` to the game. 
+
+### TODO:
 - [ ] Allow the `player` to collect gems.
+- DEBUG 
+
+### FUTURE WORK:
 * - __Sound:__ 
 - [ ] Add sounds to the game 
 - [ ] At Game start
@@ -120,6 +119,11 @@ In addition to the basic Game functionality, I will add the following additional
 - [ ] During Game: if obtaining gems (=collectables)
 - [ ] During Game: if collision between `player` and `enemy`(=bug).
 - [ ] At Game End: if game is over (=game end).
+* - __Game Level:__ 
+- [ ] Add different game levels
+- [ ] __Level 1:__ `easy`
+- [ ] __Level 2:__ `intermediate`
+- [ ] __Level 3:__ `advanced`
 
 ### Code Dependencies
 - This project is created based on the `Udacity starterscode`.
