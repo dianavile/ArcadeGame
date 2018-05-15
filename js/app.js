@@ -183,7 +183,7 @@ document.addEventListener('keyup', function(e) {
 });
 
 /* **************GEM SECTION (EXTRA FEATURE)*********** */
-/* @description GEM
+/** @description GEM
  * Create Gem class
  * Generate random X & Y-coordinates for each Gem
  * Implement gem collection mechanism
