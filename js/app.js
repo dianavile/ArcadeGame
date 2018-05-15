@@ -167,7 +167,7 @@ const newEnemy5 = new Enemy(-100, 61, 50);*/
 
 let allEnemies = [newEnemy, newEnemy1, newEnemy2, /*newEnemy3, newEnemy4, newEnemy5*/];
 
-/** @description ARROYKEYS
+/* @description ARROYKEYS
  * This Event listens for key Presses and send keys to 
  * Player.handleInput() method (for Arrow keys)- Code provided by Udacity.
  */
