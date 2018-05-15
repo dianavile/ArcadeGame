@@ -182,7 +182,7 @@ document.addEventListener('keyup', function(e) {
     player.handleInput(allowedKeys[e.keyCode]);
 });
 
-* **************GEM SECTION (EXTRA FEATURE)*********** */
+/* **************GEM SECTION (EXTRA FEATURE)*********** */
 /* @description GEM
  * Create Gem class
  * Generate random X & Y-coordinates for each Gem
