@@ -141,7 +141,7 @@ function checkCollision(oneEnemy) {
     };
 
 /**
- * @description resetPlayer
+/*  @description resetPlayer
  * Define resetPlayer() function- to put player position back to x = 202 and y = 404
  */
 function resetPlayer() { 
@@ -150,7 +150,7 @@ function resetPlayer() {
 };
  	 
 /**
- * @description INSTANTIATE Enemy and Player objects.
+/* @description INSTANTIATE Enemy and Player objects.
  * Place player object in variable 
  * Define player (x-)position: (0, 0 is top left corner) & (505 / 2 - 50.5 = 202) 
  * Place enemy object in variable
@@ -283,9 +283,9 @@ function showLives(num) {
   }
 }
 
-/* **************MODAL SECTIONS*********** 
-//Declare Modal score settings
-/* 
+/* **************MODAL SECTIONS*********** */
+/*Declare Modal score settings
+ 
 const modal = document.getElementById("modal"); // Declare Modal var
 const canvasName = document.getElementById("gameStart"); // Declare Canvas var
 let showModal = document.getElementById("gameComplete");
@@ -294,7 +294,6 @@ let hideModal = document.getElementById("restart");
 let totalMoves = document.getElementById("totalMoves").innerHTML;
 // declare playAgain button on modal
 const playAgain = document.querySelector(".restart");
-*/
 
 // Display modal game-start when game starts
 document.addEventListener("DOMContentLoaded", gameStart);
@@ -336,5 +335,4 @@ function gameWin() {
     location.reload();
   });
 }
-
-
+*/
