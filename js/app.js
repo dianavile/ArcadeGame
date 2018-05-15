@@ -183,8 +183,8 @@ document.addEventListener('keyup', function(e) {
 });
 
 /* **************GEM SECTION (EXTRA FEATURE)*********** */
-/** @description GEM
- * Create Gem class
+/** 
+ * @description GEM: Create Gem class
  * Generate random X & Y-coordinates for each Gem
  * Implement gem collection mechanism
  * If player gets gem, remove gem from board
