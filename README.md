@@ -31,7 +31,6 @@ Clone this project and open the `index.html` file in your browser, or click the 
 Play the [ArcadeGame](https://dianavile.github.io/ArcadeGame/).
 
 # Mockup:
-Here you see the final result:
 ![Game](https://github.com/dianavile/ArcadeGame/blob/master/images/Arcade_Game.png)
 
 # Game Logics: (How the game works)
@@ -40,11 +39,6 @@ Here you see the final result:
 
 # TODO-list ArcadeGame project
 In order to let the game work properly, the following requirements need to be met:
-
-# Game Start (How to begin):
-- [ ] Start with the _app.js_ file
-- [ ] **DO NOT EDIT** files: _styles.css, engine.js, resources.js and the img folder including the images_!
-- [ ] Add Game instructions to README.md file. (_how to load and play the game_)
 
 # Basic Game Functionality (Requirements):
 * - [x] Inside the __app.js file__, create two objects using Object-Oriented JavaScript. 
@@ -102,16 +96,18 @@ In addition to the basic Game functionality, I will add the following additional
 - [x] Add `gems` to the game. 
 
 ### TODO:
-- [x] Allow the `player` to collect gems.
+- [] Allow the `player` to collect gems.= Create `player`/`gem`collision to collect gems.
+- [] Restart button. Define var, create function and add EventListener in JS.
+- [] Create `lives`=hearts, so `player` can win/lose his life.
+- [] Make Modals appear on StartGame (= modal with GameRules) 
+- [] Make Modals appear on Game = lost (= modal GameOver) 
+- [] Make Modals appear on Game = won (= modal GameWin) 
 
-### Code Dependencies
+### Code Dependencies (TODO)
 - This project is created based on the `Udacity starterscode`.
 - I used the following codesnippets, fonts, images, backgrounds & emojis to create the game:
-*  Codesnippets:
-* Fonts:
-* Images:
-* Backgrounds: 
-* Emojis:
+* Codesnippets:
+* Fonts: TO ADD
 
 # Bugs:
 No known bugs, except for the ones on the screen.
