@@ -32,8 +32,7 @@ Play the [ArcadeGame](https://dianavile.github.io/ArcadeGame/).
 
 # Mockup:
 Here you see the final result:
-- The Game:
-- The GameOver:
+![Game](https://github.com/dianavile/ArcadeGame/blob/master/img/)
 
 # Game Logics: (How the game works)
 - __Goal game:__ get Player from the road safely over the grass into the water.
