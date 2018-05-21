@@ -95,7 +95,7 @@ class Gem {
 
 /* Player handleInput() method for ARROYKEYS */
 // Define allowedKeys 'left', 'right', 'down' & 'up'- see below 
-Player.prototype.handleInput = function(keyCode) {
+/* Player.prototype.handleInput = function(keyCode) {
       if (keyCode == 'left') { // See allowedKeys below
           if (this.x - 101 < 0) {
             this.x = 0;
@@ -126,9 +126,9 @@ Player.prototype.handleInput = function(keyCode) {
             this.y -= 83;
         }
     }
-}; 
+}; */
 
-/*    const handleInput = (keyCode) => {
+const handleInput = (keyCode) => {
     switch(keyCode){
       case 'left':
           (this.x-101<0) ? this.x = 0:this.x-=101;
@@ -149,8 +149,6 @@ Player.prototype.handleInput = function(keyCode) {
 }
 
 console.log (this.handleInput);
-*/
-
 
 /* @description INSTANTIATE ALL (Enemy, Player and Gem) OBJECTS  */
 //*  Create Counter for points & Use getElementById() method to define access to points
