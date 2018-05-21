@@ -95,39 +95,6 @@ class Gem {
 
 /* Player handleInput() method for ARROYKEYS */
 // Define allowedKeys 'left', 'right', 'down' & 'up'- see below 
-/* Player.prototype.handleInput = function(keyCode) {
-      if (keyCode == 'left') { // See allowedKeys below
-          if (this.x - 101 < 0) {
-            this.x = 0;
-          } else {
-            this.x -= 101;
-          }
-      }
-      if (keyCode == 'right') {
-          if (this.x + 101 > 404) {
-            this.x = 404;
-          } else {
-            this.x += 101;
-          }
-      }
-          if (keyCode == 'down') {
-          if (this.y + 85 > 404) {
-            this.y = 404;
-          } else {
-            this.y += 83;
-        }
-    }
-          if (keyCode == 'up') {
-          if (this.y - 85 < 0) { // Player reaches water
-            resetPlayer(); // Player goes back to start
-            counter = counter + 1; // Increase Score 
-            points.innerHTML = counter; // Update score points in HTML
-        } else {
-            this.y -= 83;
-        }
-    }
-}; */
-
 const handleInput = (keyCode) => {
     switch(keyCode){
       case 'left':
@@ -148,7 +115,7 @@ const handleInput = (keyCode) => {
     }
 }
 
-console.log (this.handleInput);
+console.log ('this.handleInput');
 
 /* @description INSTANTIATE ALL (Enemy, Player and Gem) OBJECTS  */
 //*  Create Counter for points & Use getElementById() method to define access to points
@@ -242,7 +209,7 @@ document.addEventListener('keyup', function(e) {
         40: 'down'
     };
 
-    player.handleInput(allowedKeys[e.keyCode]);
+    handleInput(allowedKeys[e.keyCode]);
 });
 
 function restartGame() {  
