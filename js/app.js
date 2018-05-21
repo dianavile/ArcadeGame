@@ -366,31 +366,3 @@ Key.prototype.update = function() {
 //var key = new Key(getGemX());
 */ 
 
-/*
-//HERE YOU HAVE AN EXAMPLE FOR THE ENEMY CLEAN OBJECT
-//
-class Monster {
-
-  constructor() {
-    this.x = x;
-    this.y = y;
-    this.sprite = 'images/enemy-bug.png'; 
-    this.speed = Math.floor((Math.random() * 200) + 100);
-  }
-
-  update(dt) {
-    this.x += this.speed * dt;
-    if (this.x > 500) {this.x = -100;}// Enemies move horizontally (= ONLY change x-value)
-  // Check if player collides with enemy
-      checkCollision(this); 
-    if (player.y === this.y) {
-    if (player.x > this.x - 75 && player.x < this.x + 75) 
-      player.resetPosition();
-    }
-  }
-
-  render() {
-    ctx.drawImage(Resources.get(this.sprite), this.x, this.y); 
-  }
-}
-*/
