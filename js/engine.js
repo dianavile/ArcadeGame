@@ -1,3 +1,5 @@
+'use strict'; //whole-script strict mode syntax (MDN) https://www.w3schools.com/js/js_strict.asp
+
 /* Engine.js
  * This file provides the game loop functionality (update entities and render),
  * draws the initial game board on the screen, and then calls the update and
@@ -79,7 +81,24 @@ var Engine = (function(global) {
      */
     function update(dt) {
         updateEntities(dt);
-        // checkCollisions();
+        gemCollision();
+    }
+
+    function gemCollision() { 
+        for (let gem of allGems) {
+        if (player.x < gem.x + 80 && 
+        player.x + 60 > gem.x &&
+        player.y < gem.y + 80 &&
+        40 + player.y > gem.y) {
+        //resetPlayer(); 
+            counter = counter + 1;
+            console.log(points);
+            gem.x = gem.x[Math.floor(Math.random() * gem.x.length)];
+            gem.y = gem.x[Math.floor(Math.random() * gem.x.length)];
+
+            //points.innerHTML = counter; 
+            }
+        }
     }
 
     /* This is called by the update function and loops through all of the
@@ -89,10 +108,13 @@ var Engine = (function(global) {
      * the data/properties related to the object. Do your drawing in your
      * render methods.
      */
+    let allEnemies = [newEnemy, newEnemy1, newEnemy2];
+
     function updateEntities(dt) {
         allEnemies.forEach(function(enemy) {
             enemy.update(dt);
         });
+          
         player.update();
     }
 
@@ -158,8 +180,9 @@ var Engine = (function(global) {
             gem.render();
         });
 
-        key.render();
+        //key.render();
         player.render();
+        gem1.update();
     }
 
     /* This function does nothing but it could have been a good place to
@@ -180,12 +203,14 @@ var Engine = (function(global) {
         'images/grass-block.png',
         'images/enemy-bug.png',
         'images/char-cat-girl.png',
+        'images/char-boy.png',
+        'images/char-horn-girl.png',
+        'images/char-pink-girl.png',
+        'images/char-princess-girl.png',
         'images/Heart.png',
-        'images/Gem Green.png',
-        'images/Gem Blue.png',
         'images/Gem Orange.png',
         'images/Key.png'
-    ]); // TODO: Add more images to this list.
+    ]);  
     Resources.onReady(init); // Place init function into array
 
     /* Assign the canvas' context object to the global variable (the window
