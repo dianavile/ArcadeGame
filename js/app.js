@@ -115,7 +115,7 @@ const handleInput = (keyCode) => {
     }
 }
 
-console.log ('this.handleInput');
+console.log('player.handleInput');
 
 /* @description INSTANTIATE ALL (Enemy, Player and Gem) OBJECTS  */
 //*  Create Counter for points & Use getElementById() method to define access to points
