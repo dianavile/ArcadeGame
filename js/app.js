@@ -59,11 +59,51 @@ class Player {
     showLives(this.lives); 
   }
 
-// Draw player on the screen
+/* Player handleInput() method for ARROYKEYS */
+handleInput (keyCode) {
+  switch (keyCode) {
+    case 'left':
+        if (this.x - 101 < 0) {
+            this.x = 0;            
+        } else {
+            this.x -= 101;
+        }
+        console.log('left');    
+        break;
+    case 'right':
+        if (this.x + 101 > 404) {
+            this.x = 404;
+        } else {
+            this.x += 101;
+        }
+        console.log('right');        
+        break;
+    case 'down':
+        if (this.y + 85 > 404) {
+            this.y = 404;
+        } else {
+            this.y += 83;
+        }
+        console.log('down');   
+        break;
+    case 'up':
+        if (this.y - 85 < 0) { // Player reaches water
+            //resetPlayer(); // Player goes back to start
+            //counter = counter + 1; // Increase Score 
+            //points.innerHTML = counter; // Update score points in HTML
+        } else {
+            this.y -= 83;
+        }
+        console.log('up');          
+        break;
+  }
+    console.log('player.handleInput');}
+    
+  // Draw player on the screen
   render() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y); 
   }
-}
+}  
 
 /* **************GEM SECTION*********** */
 /* CREATE GEM class */
@@ -92,30 +132,6 @@ class Gem {
       ctx.drawImage(Resources.get(this.sprite), this.GemX, this.GemY); 
     }
   }
-
-/* Player handleInput() method for ARROYKEYS */
-// Define allowedKeys 'left', 'right', 'down' & 'up'- see below 
-const handleInput = (keyCode) => {
-    switch(keyCode){
-      case 'left':
-          (this.x-101<0) ? this.x = 0:this.x-=101;
-            break;
-      case 'right': 
-          (this.x+101>404) ? this.x = 404:this.x+=404;
-            break; 
-      case 'down':
-          (this.y + 85 > 404)? this.y = 404:this.y+=83;
-            break;
-      case 'up':
-          (this.y - 85 < 0) ? this.y = 0:this.y-=83;
-            resetPlayer(); // Player goes back to start
-            counter = counter + 1; // Increase Score 
-            points.innerHTML = counter; // Update score points in HTML
-            break;
-    }
-}
-
-console.log('player.handleInput');
 
 /* @description INSTANTIATE ALL (Enemy, Player and Gem) OBJECTS  */
 //*  Create Counter for points & Use getElementById() method to define access to points
