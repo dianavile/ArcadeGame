@@ -225,7 +225,7 @@ document.addEventListener('keyup', function(e) {
         40: 'down'
     };
 
-    handleInput(allowedKeys[e.keyCode]);
+    player.handleInput(allowedKeys[e.keyCode]);
 });
 
 function restartGame() {  
