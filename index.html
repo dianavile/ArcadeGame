@@ -3,78 +3,75 @@
 
 <head>
   <!--Metatags, Viewport, Styles & Fonts--> 
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta content="Classic arcade game clone" name="description">
-    <meta content="Diana Vilé" name="author">
-    <title>Effective JavaScript: Frogger game clone</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
- </head>   
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta content="Classic arcade game clone" name="description">
+  <meta content="Diana Vilé" name="author">
+  <title>Effective JavaScript: Frogger game clone</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+</head>
 
 <body>
-    <header class="header">
-        <h1>Arcade Game</h1>
-    </header>           
-       
- <main class="game-container"> 
- <!--Scorepanel with score & lives-->         
+<header class="header">
+	<h1>Arcade Game</h1>	
+</header>
+
+<main class="game-container">
+<!--Scorepanel with score & lives-->         
 <section>
-    <div id="score-panel">
-    <button id="myBtn" class="btn">Restart</button>
-    <div class="lives"><span>Lives:</span>
-    <ul id="hearts" class="hearts"></ul>
-    </div>
+    <div id="score-panel" class="score-panel flex">
+    	<button id="myBtn" class="btn">Start</button>
+    	<div id="lives-panel" class="flex"><span id="lives-counter" class="lives">Lives:</span>
+    		<ul id="hearts" class="hearts" alt="heart Lives"></ul>
+    	</div>   
     <div class="score"><span>Score:</span>
-    <ul id="points" class="points">0</ul>
-  </div>
-  </div> 
+    	<ul id="points" class="points">0</ul>    	
+    </div>
+    </div> 
 </section>
 
 <!--start-modal game-->
-<section id="myModal" class="start_modal">
-  <h2>Choose your Player</h2>
-  <img src="images/char-cat-girl.png" alt="char-cat-girl-img" class="catGirl">
-  <img src="images/char-boy.png" alt="char-boy-img" class="boyChar">
-  <img src="images/char-horn-girl.png" alt="char-horn-girl-img" class="hornGirl">
-  <img src="images/char-pink-girl.png" alt="char-pink-girl-img" class="pinkGirl">
-  <img src="images/char-princess-girl.png" alt="char-princess-girl-img" class="princessGirl">
-<div>
-  <input type="radio"  name="choice" id="cat" onclick="choosePlayer(this.value)" value="cat"> <span class="cat-span">Cat</span>
-  <input type="radio"  name="choice" id="boy" onclick="choosePlayer(this.value)" value="boy"><span class="boy-span">Boy</span> 
-  <input type="radio"  name="choice" id="horn" onclick="choosePlayer(this.value)" value="horn"> <span class="horn-span">Horn</span>
-  <input type="radio"  name="choice" id="pink" onclick="choosePlayer(this.value)" value="pink"><span class="pink-span">Pink</span>
-  <input type="radio"  name="choice" id="princess" onclick="choosePlayer(this.value)" value="princess"><span class="princess-span">Princess</span>
-</div>
+<section id="myModal" class="start_modal"> 
+	<h2>Choose your Player</h2>
+	<img src="images/char-cat-girl.png" alt="char-cat-girl-img" class="catGirl">
+	<img src="images/char-boy.png" alt="char-boy-img" class="boyChar">
+	<img src="images/char-horn-girl.png" alt="char-horn-girl-img" class="hornGirl">
+	<img src="images/char-pink-girl.png" alt="char-pink-girl-img" class="pinkGirl">
+	<img src="images/char-princess-girl.png" alt="char-princess-girl-img" class="princessGirl">
+	<div>
+		<input type="radio"  name="choice" id="cat" onclick="choosePlayer(this.value)" value="cat"> <span class="cat-span">Cat</span>
+		<input type="radio"  name="choice" id="boy" onclick="choosePlayer(this.value)" value="boy"><span class="boy-span">Boy</span> 
+		<input type="radio"  name="choice" id="horn" onclick="choosePlayer(this.value)" value="horn"> <span class="horn-span">Horn</span>
+		<input type="radio"  name="choice" id="pink" onclick="choosePlayer(this.value)" value="pink"><span class="pink-span">Pink</span><input type="radio"  name="choice" id="princess" onclick="choosePlayer(this.value)" value="princess"><span class="princess-span">Princess</span>
+	</div>
+<section id="gameRules" class="rules-modal">
+	<h2>Game rules:</h2>
+		<p class="rules">Use Arroy Keys to move player.</p>
+    	<div class="arrows"><span> &larr; </span> <span> &uarr; </span> <span> &darr; </span><span> &rarr; </span> </div> 
+    	<p class="rules">Cross the grass = 1 point.</p>
+    	<p class="rules">Avoid the ladybirds.</p>
+    	<p class="rules">If hit by ladybird, game restarts.</p>
+    	<p class="rules">Game Win = collect 5 points.</p>
+    	<!--<button id="myBtn" class="btn">Start</button>-->	
+	</section>
 </section>
 
-<section id="gameRules" class="modal_content">
-  <h2>How to play the game:</p2>
-
-    <h5 class="rules"> 1: Use arrow keys to move player. </h5>
-    <h5 class="rules"> 2: Cross the grass = 1 point.</h5>
-    <h5 class="rules"> 3: Avoid the ladybirds.</h5>
-    <h5 class="rules"> 4: If hit by ladybird, game restarts.</h5>
-    <h5 class="rules"> 5: Collect the gem = 5 points. </h5>
-    <h5 class="rules"> 6: You win the game if 10 points.</h5>
-    <!--<button id="myBtn" class="btnt">Play</button>--> 
-</section> 
-
-<canvas class="game" id="game"> </canvas>
+<canvas class="game" id="game">
+	</canvas>	
 </main>
 
-<!--win-modal game
+<!--win-modal game-->
 <section>
   <div class="modal" id="win_modal">
     <div class="modal_content">
-      :trophy:🏆
-      <h4> And the  winner is...</h4>
+      <h4> And the 🏆 winner is...</h4>
       <h5> You won!</h5>
       <button id="myBtn" class="btn">Play</button>
     </div>
   </div>
-</section>-->
+</section>
 
 <!--lost-modal game
 <section>
@@ -90,13 +87,14 @@
 <!--<footer> 
   <div class="copyright footer-text">© 2018 Diana Vile.</div>
   credentials https://emojipedia.org/trophy/
-</footer>-->        
+ </footer>-->
 
-    <script src="js/resources.js">
-    </script>
+<script src="js/resources.js">
+	</script>
     <script src="js/app.js">
     </script>
     <script src="js/engine.js">
+    	
     </script>
 </body>
 </html>
