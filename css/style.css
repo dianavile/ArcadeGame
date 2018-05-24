@@ -1,41 +1,57 @@
 /* GLOBAL STYLE */
 @import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
 
- 
 html, 
 body {
-  min-height: 100%;
+    min-height: 100%;
   /* background: #000;*/
-  text-align: center;
 }
-
+  
 body {
     font-family: 'Press Start 2P';
     width: 100%;
     margin: 0;
     background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-size: cover;    
     display: flex;
     flex-direction: column;
     align-items: center;
-}
+    text-align: center;
+} 
 
 ul, li {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 .header h1{
-  color: #4f67d3;
+    color: #4f67d3;
+}
+
+main.container {
+    max-width: 960px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.flex,
+.flex-col {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.flex-col {
+    flex-direction: column;
 }
 
 /* SCORE PANEL SECTION */
 #score-panel {
     position: relative; 
     text-align: center; 
-    width: 750px; 
+    width: 505px; 
     height: 70px;
+    margin: 0 auto;
     background-color: #4f67d3;
     display: flex;
     box-sizing: border-box;
@@ -49,11 +65,22 @@ ul, li {
     padding-right: 0.5em;
 }
 
+.score-panel img {
+    padding: 0 5%;
+    width: 40px;
+    height: 45px;
+}
+
+.performance {
+    width: 50%;
+}
+
 .div {
     display: block;
 }
 
-.btn, #myBtn {
+.btn, 
+#myBtn {
     font-family: 'Press Start 2P';
     font-weight: bold;
     font-size: 0.8em;
@@ -109,18 +136,6 @@ ul, li {
     height: 1em;
 }
 
-/* GAME STYLE */
-.gem img {
-  max-width: 12px;
-}
-
- 
-/* MODAL STYLE */
-/* .hidden {
-    opacity: 0 !important;
-    visibility: hidden;
-}
-
 /* START MODAL STYLE */ 
 .modal{
     display: none;
@@ -139,25 +154,32 @@ ul, li {
     overflow: auto;     
 }
 
-.h2,
-.h4, 
-.modal-content{
-    position: fixed;
+.h2, 
+.h4,
+.p {
+  color:  #fff;
+}
+
+/* RULES MODAL, WIN MODAL, LOST MODAL STYLE */
+#game, 
+.rules-modal,
+.win_modal,
+.lost_modal {   
     text-align: center;
-    font-size: 1.5em;
-    margin: 0.83em;
-    font-weight: bold;
-    color: #d2d2c8;
-    opacity: 0.9;
+    font-size: 16px;
     margin: auto;
-    padding: 0px;
-    border: 1px solid #888;
-    border-radius: 1.25rem;
-    width: 500px;
-    height: 400px;
+    font-weight: bold;
+    border-radius: 25px;
+    padding: 3%;
+    position: absolute;
+    /* background-color: #fff; */
+    /* opacity: 0.4; */ 
+    width: 505px;
+    height: 605px;
     display: block;
 }
 
+.btn, 
 #myBtn {
     font-family: 'Press Start 2P';
     font-weight: bold;
@@ -180,4 +202,59 @@ ul, li {
 {
 padding: 0px;
 padding-right: 50px;
-}*/
+}
+
+/* CHECK THIS PART AFTER GAME LOGICS IS IMPLEMENTED */
+.win_modal,
+.lost_modal {  
+  height: auto;
+  width: 25%;
+  top: 25%;
+  left: 35%;
+}
+
+.win_modal,
+.lost_modal,
+.hide-modal {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 500ms;
+}
+
+.show-modal {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 500ms;
+}
+
+.rules-modal .flex {
+  align-items: flex-start;
+  padding-bottom: 3%;
+}
+
+.rules-modal img {
+  width: 40px;
+  height: 45px;
+}
+
+.rules-modal button
+.win_modal button,
+.lost_modal button {
+  font-family: inherit;
+  font-size: 1.2rem;
+  font-weight: 100;
+  color: #2fc52f;
+  background: #fff;
+  border-radius:5px;
+  text-align: center;
+  cursor: pointer;
+  padding: .5em;
+  width: 50%;
+}
+
+.win_modal img {
+  display: block;
+  height: 100px;
+  width: 100px;
+  margin: 13px auto;
+} 
